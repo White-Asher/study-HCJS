@@ -9,6 +9,24 @@
           text-decoration: none;
           /*a태그들의 밑줄을 없애고 싶을때 다음과 같은 코드를 입력함.*/
       }
+      #active{
+        color:red;
+      }
+
+      .saw { /* 이름이 지정된 클래스명 앞에 .을 붙이게 되면 class가 saw인 태크를 가리키는 선택자가 된다. */
+        color:gray;
+      }
+      .active{
+        color:red;
+      }
+      /* 이걸 통해 알 수 있는 것은, class라는 저 속성의 값은 여러개의 값이 들어올 수 있고 띄어쓰기로 구분한다는 것과 
+      하나의 태그에는 여러개의 속성이 들어올 수 있고 여러개의 선택자를 통해서 하나의 태그를 공동으로 제어할 수 있다는 것을 알 수 있다.
+      그런데 이방법은 그렇게 좋은 방법이 아님. */
+      /*여기서 2.CSS는 빨간색인데 왜 그런가 생각하면, active가 saw보다 나중에 선언되었기 때문이다. (아마 CSS는 절차지향같음) 
+      순서를 바꾸면 반대로 red보다 grey가 나중에 선언되었기 때문에 2.CSS의 글씨는 회색이 될 것이다 */
+
+      /*ID선택자 > 클래스선택자 > 태그 선택자 순으로 우선순위가 높음 */
+
       h1{
         font-size: 50px;
         text-align: center;
@@ -24,10 +42,12 @@
 <body>
   <h1><a href = "index.html">WEB</a></h1>
   <ol>
-    <li><a href= "1.html"> HTML </a></li>
-    <li><a href= "2.html" style="color:red; text-decoration: underline;"> CSS </a></li>
-    <!--글자 하나만 바꾸고 싶을 때 a tag 안에 style = " " 을 선언하면 된다. -->
-    <li><a href= "2.html"> CSS </a></li>
+    <li><a href= "1.html" class="saw" > HTML </a></li>
+    <!--
+    <li><a href= "2.html" class="saw acative" > CSS </a></li> -->
+    <!--위의 방법보다 이러한 방법이 더 좋은 방법일 수 있음 -->
+    <li><a href= "2.html" class="saw"  id="active"> CSS </a></li>
+    <!-- ID의 값은 문서에서 중복되어서 안되는 유일한 값이다 -->
     <li><a href= "3.html"> JAVASCRIPT </a></li>
   </ol>
     <h2>CSS</h2>

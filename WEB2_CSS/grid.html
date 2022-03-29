@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #grid{
+                border:5px solid pink;
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+            div{
+                border:5px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id ="grid">
+            <div>NAVIGATION</div> 
+            <div>ARTICLE</div> 
+        </div>
+        <!--div 태그는 기본적으로 화면 전체를 쓰기 때문에 자동 줄바꿈이 된다(block element)-->
+
+        <!--
+        <span>NAVIGATION</span>
+        <span>ARTICLE</span> 
+        -->
+        <!--span 태그는 기본적으로 화면 전체를 쓰기 때문에 자동 줄바꿈이 된다(block element)-->
+        <!--div, span은 무색무취 즉, 아무 뜻도 없는 tag를 지정하고 싶을 때 사용한다-->
+    </body>
+</html>
